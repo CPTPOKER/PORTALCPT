@@ -129,3 +129,5 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 .topic-card .topic-actions{margin-top:0;padding-top:2px}
 .topic-card .module-meta{margin-top:16px;margin-bottom:0}
 @media(max-width:780px){.topic-card .progress{margin-bottom:15px}.topic-card .topic-actions{gap:10px}}
+
+.lock-dialog{display:flex;align-items:center;gap:12px;padding:12px 0 4px}.lock-dialog svg{width:28px;height:28px;color:#d7b67e;flex:none}.lock-dialog p{margin:0;color:var(--muted);line-height:1.5}.check-row{display:flex!important;flex-direction:row!important;align-items:center;gap:9px}.check-row input{width:16px!important;height:16px!important;margin:0}
