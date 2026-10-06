@@ -1,0 +1,4 @@
+[functions.manage-users]
+# A função valida o bearer token com auth.getUser e confere o papel no banco.
+# Compatível com as chaves publishable atuais.
+verify_jwt = false
