@@ -76,9 +76,16 @@ function questionForm(id,moduleId){
    ...kept.map(a=>({kind:'existing',id:a.id,url:questionImageUrls[a.storage_path],name:'Imagem anexada'})),
    ...selectedFiles.map((file,i)=>({kind:'new',id:i,url:URL.createObjectURL(file),name:file.name}))
   ];
-  preview.innerHTML=`<div class="attachment-preview-head"><strong>${total} ${total===1?'imagem':'imagens'}</strong><span>Navegue pelos anexos</span></div><div class="attachment-carousel form-carousel">${items.map((x,i)=>`<figure class="attachment-slide"><img src="${attr(x.url||'')}" alt="${attr(x.name)}"><figcaption><span>${i+1} / ${total}</span><button type="button" class="attachment-remove" data-kind="${x.kind}" data-remove="${x.id}">Remover</button></figcaption></figure>`).join('')}</div>${total>1?'<div class="attachment-nav"><button type="button" data-carousel="-1">‹</button><span>Deslize ou use as setas</span><button type="button" data-carousel="1">›</button></div>':''}`;
-  preview.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{if(b.dataset.kind==='existing')removedIds.push(b.dataset.remove);else selectedFiles.splice(Number(b.dataset.remove),1);draw()});
-  preview.querySelectorAll('[data-carousel]').forEach(b=>b.onclick=()=>preview.querySelector('.attachment-carousel')?.scrollBy({left:Number(b.dataset.carousel)*Math.max(280,preview.clientWidth*.72),behavior:'smooth'}));
+  let current=0;
+  const paint=()=>{
+   const x=items[current];
+   preview.innerHTML=`<div class="attachment-preview-head"><strong>${total} ${total===1?'imagem':'imagens'}</strong><span>${current+1} de ${total}</span></div><div class="attachment-stage"><img src="${attr(x.url||'')}" alt="${attr(x.name)}">${total>1?`<button type="button" class="gallery-arrow prev" data-step="-1" aria-label="Imagem anterior">‹</button><button type="button" class="gallery-arrow next" data-step="1" aria-label="Próxima imagem">›</button>`:''}<button type="button" class="attachment-remove overlay-remove" data-kind="${x.kind}" data-remove="${x.id}">Remover</button></div>${total>1?`<div class="attachment-thumbs">${items.map((it,i)=>`<button type="button" data-thumb="${i}" class="${i===current?'active':''}" aria-label="Ver imagem ${i+1}"><img src="${attr(it.url||'')}" alt=""></button>`).join('')}</div>`:''}`;
+   preview.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{current=(current+Number(b.dataset.step)+items.length)%items.length;paint()});
+   preview.querySelectorAll('[data-thumb]').forEach(b=>b.onclick=()=>{current=Number(b.dataset.thumb);paint()});
+   const rm=preview.querySelector('[data-remove]');
+   if(rm)rm.onclick=()=>{if(rm.dataset.kind==='existing')removedIds.push(rm.dataset.remove);else selectedFiles.splice(Number(rm.dataset.remove),1);draw()};
+  };
+  paint();
  };
  if(input)input.onchange=()=>{
   const files=[...input.files];
