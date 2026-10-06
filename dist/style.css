@@ -372,3 +372,18 @@ dialog{
 /* PLO5 · sobe ranks mantendo leve corte inferior */
 .plo-hand:not(.compact-hand) .playing>strong{bottom:-7px!important}
 .plo-hand:not(.compact-hand) .playing.c5>strong{bottom:-5px!important}
+
+
+/* PLO5 · ranks maiores e mais altos */
+.plo-hand:not(.compact-hand) .playing>strong{
+ bottom:1px!important;
+ font-size:88px!important;
+ line-height:.80!important;
+ letter-spacing:-9px!important
+}
+.plo-hand:not(.compact-hand) .playing.c5>strong{
+ left:-10px!important;right:-10px!important;
+ bottom:2px!important;
+ font-size:73px!important;
+ letter-spacing:-11px!important
+}
