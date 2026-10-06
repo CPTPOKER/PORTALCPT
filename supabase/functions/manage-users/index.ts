@@ -37,14 +37,9 @@ Deno.serve(async(req:Request)=>{
    if(typeof input.user_id!=='string'||typeof input.active!=='boolean'||input.user_id===user.id)return response(400,{error:'Usuário inválido.'});
    const {data:target,error:targetError}=await service.from('profiles').select('id,role,active').eq('id',input.user_id).single();
    if(targetError||!target||target.role==='admin')return response(400,{error:'Somente contas de alunos podem ser alteradas.'});
-   const {error:updateError}=await service.from('profiles').update({active:input.active}).eq('id',input.user_id);
-   if(updateError)return response(500,{error:'Não foi possível atualizar o acesso.'});
-   const {error:banError}=await service.auth.admin.updateUserById(input.user_id,{ban_duration:input.active?'none':'876000h'});
-   if(banError){
-    if(input.active)await service.from('profiles').update({active:target.active}).eq('id',input.user_id);
-    return response(500,{error:input.active?'Não foi possível liberar o login. Tente novamente.':'Acesso aos dados bloqueado. Não foi possível bloquear o login; tente novamente.'});
-   }
-   return response(200,{ok:true});
+   const {data:updated,error:updateError}=await service.from('profiles').update({active:input.active}).eq('id',input.user_id).select('id,active').single();
+   if(updateError||!updated)return response(500,{error:'Não foi possível atualizar o acesso.'});
+   return response(200,{ok:true,active:updated.active});
   }
   return response(400,{error:'Ação inválida.'});
  }catch{return response(500,{error:'Não foi possível processar a solicitação.'});}
