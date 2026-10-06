@@ -86,3 +86,29 @@ dialog.has-images .fields{grid-template-columns:minmax(0,1fr)}
  .published-gallery{padding:8px;margin-top:14px}.published-gallery .attachment-slide img{height:52dvh;min-height:240px}
  .attachment-nav{position:sticky;left:0}
 }
+
+/* Preview de anexos v2 — compacto, sem overflow horizontal */
+dialog.has-images{width:min(760px,calc(100vw - 40px));max-width:760px;overflow-x:hidden}
+dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.has-images #questionUploadPreview{min-width:0;max-width:100%}
+#questionUploadPreview{overflow:hidden;padding:10px}
+.attachment-preview-head{flex-direction:row!important;align-items:center!important;margin-bottom:8px}
+.attachment-stage{position:relative;width:100%;height:min(42vh,360px);min-height:220px;overflow:hidden;border:1px solid #432731;border-radius:9px;background:#09080a}
+.attachment-stage>img{display:block;width:100%;height:100%;object-fit:contain}
+.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:44px;border:1px solid #ffffff22;border-radius:8px;background:#09080acc;color:#fff;font-size:28px;line-height:1;box-shadow:0 4px 16px #0005}
+.gallery-arrow.prev{left:9px}.gallery-arrow.next{right:9px}
+.overlay-remove{position:absolute;top:9px;right:9px;z-index:3;background:#39121dcc;backdrop-filter:blur(5px)}
+.attachment-thumbs{display:flex;gap:7px;width:100%;overflow-x:auto;padding:8px 1px 1px;scrollbar-width:thin}
+.attachment-thumbs button{flex:0 0 54px;width:54px;height:44px;padding:2px;border:1px solid #493039;border-radius:6px;background:#0b090b;overflow:hidden}
+.attachment-thumbs button.active{border-color:#d4ad6d;box-shadow:0 0 0 1px #d4ad6d55}
+.attachment-thumbs img{display:block;width:100%;height:100%;object-fit:cover;border-radius:3px}
+@media(max-width:780px){
+ dialog.has-images{width:calc(100vw - 16px);max-width:none;overflow-x:hidden;padding:15px 12px}
+ .attachment-stage{height:min(34dvh,300px);min-height:190px}
+ .gallery-arrow{width:34px;height:40px;font-size:24px}.gallery-arrow.prev{left:6px}.gallery-arrow.next{right:6px}
+ .attachment-thumbs button{flex-basis:48px;width:48px;height:40px}
+}
+@media(max-width:430px){
+ dialog.has-images{width:calc(100vw - 10px);padding:13px 10px}
+ .attachment-stage{height:230px;min-height:0}
+ .attachment-preview-head strong,.attachment-preview-head span{font-size:10px}
+}
