@@ -367,3 +367,8 @@ dialog{
  left:-9px!important;right:-10px!important;bottom:-13px!important;
  font-size:65px!important;letter-spacing:-10px!important
 }
+
+
+/* PLO5 · sobe ranks mantendo leve corte inferior */
+.plo-hand:not(.compact-hand) .playing>strong{bottom:-7px!important}
+.plo-hand:not(.compact-hand) .playing.c5>strong{bottom:-5px!important}
