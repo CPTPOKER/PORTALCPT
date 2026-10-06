@@ -387,3 +387,15 @@ dialog{
  font-size:73px!important;
  letter-spacing:-11px!important
 }
+
+
+/* ===== AULAS · busca inteligente ===== */
+.smart-search{position:relative;z-index:30}
+.smart-search:focus-within{border-color:#73505a;box-shadow:0 0 0 3px #d7b67e0c}
+.search-suggestions{position:absolute;left:-1px;right:-1px;top:calc(100% + 8px);background:#181517;border:1px solid #49363c;border-radius:11px;box-shadow:0 20px 48px #0009;overflow:hidden;padding:6px;z-index:100}
+.search-result{width:100%;border:0;background:transparent;color:#f2eeea;display:grid;grid-template-columns:64px 1fr 24px;gap:10px;align-items:center;text-align:left;padding:10px 11px;border-radius:8px;cursor:pointer}
+.search-result:hover,.search-result:focus{background:#2a2024;outline:0}
+.search-kind{font-size:9px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:#d7b67e}
+.search-result-copy{min-width:0;display:flex;flex-direction:column;gap:3px}.search-result-copy strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search-result-copy small{font-size:10px;color:#8f8286;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-go svg{width:15px;height:15px;color:#8f8286}.search-empty{padding:15px 12px;color:#8f8286;font-size:12px}
+@media(max-width:780px){.search-suggestions{position:fixed;left:12px;right:12px;top:auto;margin-top:8px}.search-result{grid-template-columns:55px 1fr 20px}}
