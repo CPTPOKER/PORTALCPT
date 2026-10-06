@@ -137,98 +137,73 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 @media(max-width:780px){.password-toggle{width:40px;height:40px;right:3px}.password-wrap>input{padding-right:48px!important}}
 
 
-/* ===== CPT VISUAL REFRESH · PLO5 · 2026-10-06 ===== */
-body{background:
- radial-gradient(circle at 86% -10%,#4a111d38 0,transparent 34%),
- radial-gradient(circle at 12% 110%,#2f1e1830 0,transparent 28%),
- var(--bg);background-attachment:fixed}
-.sidebar{background:linear-gradient(180deg,#1d181b 0%,#151315 100%);box-shadow:18px 0 55px #00000024}
-.topbar{background:#151315e8;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.content{padding-top:40px}
-.page-title{padding-bottom:8px}
-.page-title h1{font-weight:800;letter-spacing:-1.25px}
-.panel,.stat,.module-card,.lesson-row,.question-card,.continue-card,.table-wrap,.profile-grid>.panel{
- box-shadow:0 14px 38px #00000020,inset 0 1px #ffffff05;
- transition:border-color .2s,transform .2s,box-shadow .2s}
-.module-card:hover,.lesson-row:hover,.question-card:hover{
- transform:translateY(-2px);border-color:#594047;box-shadow:0 18px 45px #00000032,inset 0 1px #ffffff08}
-.btn{border-radius:10px;letter-spacing:.01em;transition:transform .16s,filter .16s,box-shadow .16s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px #00000032}
-.btn.lime{box-shadow:0 8px 24px #ef233c22}
-input,textarea,select{background:linear-gradient(180deg,#1d191b,#181517);border-color:#49353c;transition:border-color .18s,box-shadow .18s}
-input:focus,textarea:focus,select:focus{box-shadow:0 0 0 3px #ef233c14}
-.hero{background:
- radial-gradient(circle at 77% 50%,#ef233c16,transparent 34%),
- linear-gradient(135deg,#f2eeea 0%,#e8e0da 100%);
- box-shadow:0 22px 55px #00000028;min-height:270px;border:1px solid #ffffff1a}
-.hero:before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 52%,#ffffff24 52.2%,transparent 52.6%);opacity:.35}
-.hero-art{min-height:210px}
-.orbit{width:330px;height:330px;border-color:#7b2433aa;box-shadow:inset 0 0 55px #ef233c0c}
-.orbit:after{border-color:#7b243377}
-.art-star{top:4px;left:auto;right:14px;font:800 10px Manrope,sans-serif;letter-spacing:2px;color:#7b2433;background:#f2eeea;border:1px solid #7b243344;padding:6px 9px;border-radius:20px}
-.plo-hand{position:relative;width:320px;height:190px;z-index:2}
-.plo-hand .playing{position:absolute;width:88px;height:128px;border:3px solid #21171a;padding:8px;font-size:17px;box-shadow:0 16px 30px #00000030}
-.plo-hand .playing b{inset:31px 0;font-size:43px}
-.plo-hand .playing small{font-size:17px}
-.plo-hand .c1{left:17px;top:34px;transform:rotate(-20deg)}
-.plo-hand .c2{left:67px;top:17px;transform:rotate(-10deg);color:#9f2034}
-.plo-hand .c3{left:116px;top:9px;transform:rotate(0);color:#9f2034}
-.plo-hand .c4{left:165px;top:17px;transform:rotate(10deg)}
-.plo-hand .c5{left:214px;top:34px;transform:rotate(20deg)}
-.chip-stack{position:absolute;right:28px;bottom:4px;width:68px;height:64px;z-index:4;filter:drop-shadow(0 12px 10px #0005)}
-.chip-stack i{position:absolute;display:block;width:58px;height:58px;border-radius:50%;background:
- radial-gradient(circle,#4a111d 0 34%,#d1ad6d 35% 39%,#671427 40% 57%,transparent 58%),
- repeating-conic-gradient(#efe5d8 0 9deg,#8f172a 9deg 36deg);
- border:3px solid #42101b;box-shadow:inset 0 0 0 4px #8f172a,inset 0 0 0 7px #d9c9b6,0 3px 0 #390b14}
+
+
+/* ===== CPT PLO5 VISUAL REFINEMENT · original palette preserved ===== */
+/* Mantém as cores-base originais e adiciona acabamento, sem recolorir o sistema */
+.panel,.stat,.module-card,.lesson-row,.question-card,.continue-card,.topic-card,.table-wrap{
+ box-shadow:0 10px 28px #00000018,inset 0 1px #ffffff05;
+ transition:transform .18s,border-color .18s,box-shadow .18s}
+.module-card:hover,.lesson-row:hover,.question-card:hover,.topic-card:hover{
+ transform:translateY(-2px);box-shadow:0 15px 34px #00000024,inset 0 1px #ffffff07}
+.btn{transition:transform .16s,box-shadow .16s}
+.btn:hover{transform:translateY(-1px)}
+input,textarea,select{transition:border-color .16s,box-shadow .16s}
+input:focus,textarea:focus,select:focus{box-shadow:0 0 0 3px #d7b67e16}
+
+/* A arte nunca cobre a marca */
+.login-visual{isolation:isolate;overflow:hidden}
+.login-visual>.brand{position:relative;z-index:20}
+.login-visual>h1,.login-visual>p,.login-visual>.eyebrow{position:relative;z-index:8}
+.login-visual:before,.login-visual:after{display:none!important}
+
+/* PLO5: cinco cartas físicas */
+.hero-art.plo5-art{position:relative;isolation:isolate}
+.plo5-art .orbit{z-index:0;opacity:.42}
+.plo5-art .art-star{z-index:5}
+.plo-hand{position:relative;width:318px;height:190px;z-index:3;filter:drop-shadow(0 16px 15px #00000022)}
+.plo-hand .playing{
+ position:absolute;width:86px;height:126px;padding:8px 8px 9px;
+ border:1px solid #cfc6bd;border-radius:8px;
+ background:linear-gradient(145deg,#fffdfa 0%,#f2ece6 68%,#e7ded6 100%);
+ box-shadow:inset 0 0 0 1px #ffffff,0 3px 0 #c8beb5,0 13px 20px #0000002e;
+ font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:17px;line-height:1;
+ color:#181416;transform-origin:50% 92%}
+.plo-hand .playing:after{content:'';position:absolute;inset:4px;border:1px solid #3d30331a;border-radius:5px;pointer-events:none}
+.plo-hand .playing b{position:absolute;inset:31px 0 auto;text-align:center;font-size:42px;line-height:1}
+.plo-hand .playing small{position:absolute;right:8px;bottom:8px;font-size:16px;transform:rotate(180deg)}
+.plo-hand .c1{left:16px;top:37px;transform:rotate(-19deg)}
+.plo-hand .c2{left:66px;top:19px;transform:rotate(-10deg);color:#9e2637}
+.plo-hand .c3{left:116px;top:11px;transform:rotate(0);color:#9e2637}
+.plo-hand .c4{left:166px;top:19px;transform:rotate(10deg)}
+.plo-hand .c5{left:216px;top:37px;transform:rotate(19deg)}
+
+/* Fichas inspiradas em fichas físicas: aro, edge spots e espessura lateral */
+.chip-stack{position:absolute;right:24px;bottom:0;width:86px;height:78px;z-index:6;filter:drop-shadow(0 12px 10px #00000045)}
+.chip-stack i{
+ position:absolute;display:block;width:64px;height:64px;border-radius:50%;
+ background:
+ radial-gradient(circle at 50% 50%,#4b111b 0 29%,#d7b67e 30% 33%,#6e1624 34% 48%,#3b0d15 49% 52%,transparent 53%),
+ repeating-conic-gradient(from 3deg,#eee8e1 0 8deg,#7b1827 8deg 34deg);
+ border:2px solid #451019;
+ box-shadow:inset 0 0 0 3px #7a1827,inset 0 0 0 6px #d7b67e,0 5px 0 #350b12,0 8px 8px #00000036}
+.chip-stack i:before{content:'';position:absolute;left:8px;right:8px;bottom:-7px;height:10px;border-radius:0 0 50% 50%;background:repeating-linear-gradient(90deg,#48101a 0 9px,#e8e1da 9px 16px,#721524 16px 26px);z-index:-1}
+.chip-stack i:after{content:'CPT';position:absolute;inset:0;display:grid;place-items:center;font:800 7px Manrope,sans-serif;letter-spacing:1px;color:#d7b67e}
 .chip-stack i:nth-child(1){left:0;bottom:0}
-.chip-stack i:nth-child(2){left:6px;bottom:7px}
-.chip-stack i:nth-child(3){left:12px;bottom:14px}
-.art-chip{width:54px;height:54px;border:0;background:
- radial-gradient(circle,#4a111d 0 34%,#d1ad6d 35% 39%,#671427 40% 57%,transparent 58%),
- repeating-conic-gradient(#efe5d8 0 9deg,#8f172a 9deg 36deg);
- box-shadow:inset 0 0 0 4px #8f172a,inset 0 0 0 7px #d9c9b6,0 8px 15px #0005}
-.module-cover{background:
- radial-gradient(circle at 85% 50%,#ef233c18,transparent 40%),
- linear-gradient(135deg,#4a1522,#2c1118);border-bottom:1px solid #ffffff08}
-.module-cover:after{content:'PLO5';position:absolute;right:16px;bottom:12px;font:800 9px Manrope;letter-spacing:2px;color:#d1ad6d88}
-.module-cover .suit{filter:drop-shadow(0 10px 16px #0004)}
-.module-body{padding:22px}
-.lesson-num{border:1px solid #50343d;box-shadow:inset 0 1px #ffffff08}
-.stat{position:relative;overflow:hidden}
-.stat:after{content:'';position:absolute;width:70px;height:70px;border-radius:50%;right:-28px;bottom:-34px;border:10px dashed #ef233c0c}
-.progress{height:6px;background:#35252b}
-.avatar{box-shadow:inset 0 0 0 1px #d1ad6d25}
-dialog{background:linear-gradient(180deg,#201a1d,#171416);box-shadow:0 35px 120px #00000080,inset 0 1px #ffffff08}
-.login{background:#101012}
-.login-visual{background:
- radial-gradient(circle at 68% 36%,#ef233c18,transparent 29%),
- radial-gradient(circle at 20% 88%,#d1ad6d0c,transparent 24%),
- linear-gradient(145deg,#21181c 0%,#141214 70%);color:var(--ink);border-right:1px solid #3a282f}
-.login-visual:before{content:'';position:absolute;width:520px;height:520px;border:1px solid #d1ad6d12;border-radius:50%;right:-210px;top:-190px}
-.login-visual:after{content:'';position:absolute;width:360px;height:360px;border:1px dashed #ef233c14;border-radius:50%;left:-180px;bottom:-160px}
-.login-visual h1{font-size:48px;max-width:500px;letter-spacing:-2px;text-shadow:0 12px 30px #0006}
-.login-visual p{color:#b9aeb1;max-width:440px;font-size:14px}
-.login-visual .hero-art{height:330px;flex:1}
-.login-visual .orbit{border-color:#ef233c36}
-.login-visual .art-star{background:#26171c;color:#d1ad6d;border-color:#d1ad6d33}
-.login-form{position:relative;background:radial-gradient(circle at 50% 45%,#2a171d44,transparent 44%),#101012}
-.login-form>div{width:min(410px,100%);padding:36px 34px;border:1px solid #3b2c31;border-radius:18px;background:#191719cc;box-shadow:0 28px 80px #0006,inset 0 1px #ffffff07;backdrop-filter:blur(12px)}
-.login-form h1{font-size:32px;letter-spacing:-1.2px}
-.login-form .fields{gap:18px}
-.login-form .btn[type=submit]{min-height:48px;margin-top:7px;background:linear-gradient(180deg,#f4f0ec,#ddd4cd);box-shadow:0 10px 28px #0005}
-.role-option{border-radius:12px;background:linear-gradient(180deg,#1e1a1c,#181517);min-height:68px}
-.role-option.selected{box-shadow:0 0 0 1px #d7b67e44,0 10px 28px #0004}
-.sidebar .brand-badge{box-shadow:0 0 0 4px #d1ad6d0a,0 8px 24px #0005}
-.nav button{transition:background .18s,color .18s,transform .18s}
-.nav button:hover{transform:translateX(2px)}
-.nav button.active{box-shadow:inset 3px 0 #ef233c,0 8px 22px #0002}
-.topic-card{background:linear-gradient(145deg,#1d191b,#171416);box-shadow:0 14px 38px #0002,inset 0 1px #ffffff05;transition:.2s}
-.topic-card:hover{transform:translateY(-2px);border-color:#594047}
-.topic-number{border:1px solid #5a3842;box-shadow:inset 0 1px #ffffff08}
+.chip-stack i:nth-child(2){left:7px;bottom:10px}
+.chip-stack i:nth-child(3){left:14px;bottom:20px}
+
+/* Login: conserva o layout/cores originais, melhora apenas composição e acabamento */
+.login-visual .hero-art{position:relative;z-index:2}
+.login-form>div{box-shadow:0 22px 60px #0000002d,inset 0 1px #ffffff05}
+.role-option{transition:transform .16s,border-color .16s,box-shadow .16s}
+.role-option:hover{transform:translateY(-1px)}
+.role-option.selected{box-shadow:0 8px 22px #00000018}
+.module-cover{position:relative;overflow:hidden}
+.module-cover:after{content:'PLO5';position:absolute;right:14px;bottom:10px;font:800 9px Manrope,sans-serif;letter-spacing:1.8px;color:#d7b67e80}
+.topic-number,.lesson-num{box-shadow:inset 0 1px #ffffff08}
+
 @media(max-width:780px){
- .login-form{background:radial-gradient(circle at 50% 20%,#3c162044,transparent 35%),#101012}
- .login-form>div{padding:27px 22px;border-radius:16px}
- .hero{min-height:250px}
- .plo-hand{transform:scale(.76);transform-origin:center}
- .chip-stack{right:12px;bottom:0;transform:scale(.78)}
+ .plo-hand{transform:scale(.78);transform-origin:center}
+ .chip-stack{right:8px;transform:scale(.8);transform-origin:right bottom}
 }
