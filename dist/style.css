@@ -115,3 +115,11 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 
 .question-admin-actions{display:flex;align-items:center;gap:8px}.question-admin-actions .btn{min-height:36px}
 @media(max-width:780px){.question-admin-actions{width:100%;display:grid;grid-template-columns:auto 1fr}.question-admin-actions .btn{width:100%;justify-content:center}}
+
+/* Temas — nível intermediário entre módulo e aula */
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.topic-card{display:flex;gap:16px;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.topic-number{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:9px;background:#2a171d;color:#d7b67e;font-weight:800;font-size:12px}
+.topic-card h2{margin:3px 0 7px;font-size:18px}.topic-card p{color:var(--muted);font-size:12px;line-height:1.55;margin:0 0 14px}
+.topic-actions{display:flex;align-items:center;gap:8px;margin-top:14px}.unassigned-lessons{margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+@media(max-width:780px){.topic-grid{grid-template-columns:1fr;gap:10px}.topic-card{padding:14px 12px;gap:11px;border-radius:10px}.topic-number{flex-basis:36px;width:36px;height:36px}.topic-card h2{font-size:16px}.topic-actions .btn{flex:1;justify-content:center}.unassigned-lessons{margin-top:22px;padding-top:18px}}
