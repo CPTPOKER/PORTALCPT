@@ -112,3 +112,6 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
  .attachment-stage{height:230px;min-height:0}
  .attachment-preview-head strong,.attachment-preview-head span{font-size:10px}
 }
+
+.question-admin-actions{display:flex;align-items:center;gap:8px}.question-admin-actions .btn{min-height:36px}
+@media(max-width:780px){.question-admin-actions{width:100%;display:grid;grid-template-columns:auto 1fr}.question-admin-actions .btn{width:100%;justify-content:center}}
