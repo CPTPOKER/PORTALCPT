@@ -276,3 +276,40 @@ dialog{
 .plo-hand:not(.compact-hand) .playing>strong{position:absolute;z-index:4;left:7px;right:3px;bottom:4px;font-family:Arial Black,Arial,sans-serif;font-size:52px;line-height:.82;letter-spacing:-5px;color:#fff;text-align:center;text-shadow:0 2px 3px #0005}
 .plo-hand:not(.compact-hand) .playing>b,.plo-hand:not(.compact-hand) .playing>small{display:none!important}
 .plo-hand:not(.compact-hand) .playing:after{inset:3px!important;border:1px solid #ffffff12!important;border-radius:5px!important;box-shadow:inset 0 1px #ffffff0d!important}
+
+
+/* ===== PLO5 CARD FACE V3 · clean real-card reference ===== */
+.plo-hand:not(.compact-hand) .playing{
+ --suit:#17191a;
+ background:linear-gradient(145deg,#fff 0%,#f2f2f1 72%,#dededc 100%)!important;
+ border:1px solid #c9c9c6!important;
+ color:var(--suit)!important;
+ border-radius:7px!important;
+ box-shadow:inset 0 0 0 1px #fff,0 4px 0 #b9b9b6,0 14px 20px #0005!important
+}
+.plo-hand:not(.compact-hand) .playing:before{display:none!important}
+.plo-hand:not(.compact-hand) .playing.black{--suit:#17191a}
+.plo-hand:not(.compact-hand) .playing.red{--suit:#d51f2b}
+.plo-hand:not(.compact-hand) .playing.green{--suit:#087f38}
+.plo-hand:not(.compact-hand) .playing.blue{--suit:#0874b9}
+.plo-hand:not(.compact-hand) .corner{
+ left:8px!important;top:7px!important;display:flex!important;flex-direction:column!important;
+ align-items:center!important;font-family:Arial,Helvetica,sans-serif!important;
+ font-size:18px!important;font-weight:700!important;line-height:.82!important;
+ color:var(--suit)!important;text-shadow:none!important;letter-spacing:-.5px!important
+}
+.plo-hand:not(.compact-hand) .corner em{
+ font-style:normal!important;font-size:13px!important;margin-top:5px!important;
+ color:var(--suit)!important;line-height:1!important
+}
+.plo-hand:not(.compact-hand) .playing>strong{
+ position:absolute!important;z-index:4!important;left:0!important;right:0!important;
+ top:42px!important;bottom:auto!important;text-align:center!important;
+ font-family:Georgia,'Times New Roman',serif!important;font-size:48px!important;
+ line-height:1!important;letter-spacing:0!important;font-weight:400!important;
+ color:var(--suit)!important;text-shadow:none!important
+}
+.plo-hand:not(.compact-hand) .playing:after{
+ display:block!important;content:''!important;position:absolute!important;inset:4px!important;
+ border:1px solid #00000009!important;border-radius:4px!important;box-shadow:none!important
+}
