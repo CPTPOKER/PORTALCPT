@@ -174,3 +174,78 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 
 .hero-art.plo5-art:after{content:'';position:absolute;left:2%;right:2%;bottom:-9px;height:34px;border-radius:50%;background:radial-gradient(ellipse,#20131588,transparent 68%);filter:blur(2px);z-index:1}
 @media(max-width:780px){.plo-hand{transform:scale(.78);transform-origin:center}.poker-table-chips{right:0;transform:scale(.78) rotate(-4deg);transform-origin:right bottom}}
+
+
+/* ===== INTERNAL THEME · MATCH LOGIN ===== */
+body:not(.login){
+ background:
+  radial-gradient(circle at 12% 0%,#32131c26 0,transparent 28%),
+  linear-gradient(180deg,#121012 0%,#0e0d0f 100%);
+ color:#f2eeea
+}
+.sidebar{
+ background:linear-gradient(180deg,#1d181b 0%,#151315 100%);
+ border-right-color:#3a2c31;
+ box-shadow:14px 0 38px #0000002b
+}
+.topbar{
+ background:#151315ed;
+ border-bottom-color:#3a2c31;
+ backdrop-filter:blur(14px);
+ -webkit-backdrop-filter:blur(14px)
+}
+.content{background:transparent}
+.page-title h1,.panel h2,.module-body h2,.topic-card h2,.lesson-row h3,.question-card h3{color:#f2eeea}
+.page-title p,.muted,.module-body p,.topic-card p{color:#a99da0}
+.panel,.stat,.module-card,.lesson-row,.question-card,.continue-card,.topic-card,.table-wrap{
+ background:linear-gradient(145deg,#1d191b 0%,#181517 100%);
+ border-color:#3d2e33;
+ box-shadow:0 12px 30px #00000025,inset 0 1px #ffffff05
+}
+.module-card:hover,.lesson-row:hover,.question-card:hover,.topic-card:hover{
+ border-color:#65464f;
+ box-shadow:0 16px 38px #00000036,inset 0 1px #ffffff07
+}
+.nav button{color:#a99da0}
+.nav button:hover{background:#ffffff06;color:#f2eeea}
+.nav button.active{
+ background:linear-gradient(90deg,#3b2028 0%,#24191d 100%);
+ color:#e6c183;
+ border-color:#563640
+}
+.stat .value,.module-meta strong{color:#f2eeea}
+.module-cover{
+ background:
+  radial-gradient(circle at 82% 48%,#d7b67e12,transparent 40%),
+  linear-gradient(135deg,#4a1522 0%,#291319 100%)
+}
+.progress{background:#35262b}
+.progress>i{background:linear-gradient(90deg,#9f263a,#c33a4e)}
+.topic-number,.lesson-num{
+ background:#2a171d;
+ color:#d7b67e;
+ border-color:#533640
+}
+input,textarea,select{
+ background:#171416;
+ border-color:#49363c;
+ color:#f2eeea
+}
+input::placeholder,textarea::placeholder{color:#786c70}
+input:focus,textarea:focus,select:focus{
+ border-color:#9a7450;
+ box-shadow:0 0 0 3px #d7b67e12
+}
+.btn.ghost{background:#1b1719;border-color:#49363c;color:#ddd3d0}
+.btn.ghost:hover{background:#241c20;border-color:#65464f}
+dialog{
+ background:linear-gradient(180deg,#201a1d,#171416);
+ border-color:#49343b;
+ box-shadow:0 32px 90px #00000075,inset 0 1px #ffffff06
+}
+.table-wrap table tr{border-color:#382a2f}
+.avatar{background:#2b1a20;color:#e6c183}
+.badge{border-color:#4d363d}
+.mobile-bottom-nav{background:#151315f2;border-color:#3a2c31}
+.mobile-bottom-nav button{color:#a99da0}
+.mobile-bottom-nav button.active{color:#e6c183}
