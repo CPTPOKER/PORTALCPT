@@ -249,3 +249,16 @@ dialog{
 .mobile-bottom-nav{background:#151315f2;border-color:#3a2c31}
 .mobile-bottom-nav button{color:#a99da0}
 .mobile-bottom-nav button.active{color:#e6c183}
+
+
+/* ===== PLO5 CARD FACES · cores inspiradas na referência ===== */
+.plo-hand:not(.compact-hand) .playing{background:linear-gradient(145deg,#292b2b 0%,#171819 34%,#101112 100%);border-color:#3d4141;color:#f5f5f2}
+.plo-hand:not(.compact-hand) .playing:before{content:'';position:absolute;left:0;right:0;bottom:0;height:66%;background:var(--card-accent,#303333);clip-path:polygon(0 18%,100% 0,100% 100%,0 100%);z-index:0;opacity:.96}
+.plo-hand:not(.compact-hand) .playing:after{z-index:3;border-color:#ffffff1c}
+.plo-hand:not(.compact-hand) .playing.black{--card-accent:#303333}
+.plo-hand:not(.compact-hand) .playing.red{--card-accent:#a90d18;color:#fff}
+.plo-hand:not(.compact-hand) .playing.green{--card-accent:#087b32;color:#fff}
+.plo-hand:not(.compact-hand) .playing.blue{--card-accent:#075a94;color:#fff}
+.plo-hand:not(.compact-hand) .corner,.plo-hand:not(.compact-hand) .playing>b,.plo-hand:not(.compact-hand) .playing small{z-index:4;text-shadow:0 2px 4px #0009}
+.plo-hand:not(.compact-hand) .playing>b{color:#fff}
+.plo-hand:not(.compact-hand) .corner em,.plo-hand:not(.compact-hand) .playing small em{color:#fff}
