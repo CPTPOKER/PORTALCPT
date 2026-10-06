@@ -123,3 +123,9 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 .topic-card h2{margin:3px 0 7px;font-size:18px}.topic-card p{color:var(--muted);font-size:12px;line-height:1.55;margin:0 0 14px}
 .topic-actions{display:flex;align-items:center;gap:8px;margin-top:14px}.unassigned-lessons{margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
 @media(max-width:780px){.topic-grid{grid-template-columns:1fr;gap:10px}.topic-card{padding:14px 12px;gap:11px;border-radius:10px}.topic-number{flex-basis:36px;width:36px;height:36px}.topic-card h2{font-size:16px}.topic-actions .btn{flex:1;justify-content:center}.unassigned-lessons{margin-top:22px;padding-top:18px}}
+
+/* Ajuste de espaçamento dos cards de tema */
+.topic-card .progress{margin-top:10px;margin-bottom:18px}
+.topic-card .topic-actions{margin-top:0;padding-top:2px}
+.topic-card .module-meta{margin-top:16px;margin-bottom:0}
+@media(max-width:780px){.topic-card .progress{margin-bottom:15px}.topic-card .topic-actions{gap:10px}}
