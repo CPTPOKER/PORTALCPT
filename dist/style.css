@@ -137,56 +137,26 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 @media(max-width:780px){.password-toggle{width:40px;height:40px;right:3px}.password-wrap>input{padding-right:48px!important}}
 
 
-
-
-
-
-/* ===== CPT PLO5 · BLACK / CRIMSON / GOLD ===== */
-:root{
- --bg:#0b0b0d;--panel:#151316;--panel2:#1b171a;--line:#38292e;
- --ink:#f3eee8;--muted:#a99da0;--gold:#d7ae5b;--gold2:#f0cf7a;
- --crimson:#8d1026;--crimson2:#bd1835
-}
-body{background:radial-gradient(circle at 18% 0,#3b111a55,transparent 32%),linear-gradient(180deg,#0d0c0e,#09090b);color:var(--ink)}
-.sidebar{background:linear-gradient(180deg,#151114,#0c0b0d);border-color:#35252a;box-shadow:14px 0 42px #0006}
-.topbar{background:#0d0c0ee8;border-color:#35252a;backdrop-filter:blur(14px)}
-.panel,.stat,.module-card,.lesson-row,.question-card,.continue-card,.topic-card,.table-wrap{background:linear-gradient(145deg,#181518,#121113);border-color:#392a2f;box-shadow:0 14px 34px #0004,inset 0 1px #ffffff05}
-.module-card:hover,.lesson-row:hover,.question-card:hover,.topic-card:hover{border-color:#765043;transform:translateY(-2px);box-shadow:0 18px 40px #0006}
-.nav button.active{background:linear-gradient(90deg,#74132655,transparent);color:#f0cf7a;border-left-color:#bd1835}
-.btn.lime,.progress>i{background:linear-gradient(90deg,#9d132b,#c9233e)}
-.btn{border-color:#49343a}.eyebrow,label{color:#d7ae5b}
-input,textarea,select{background:#100f11;border-color:#49343a;color:#f3eee8}
-input:focus,textarea:focus,select:focus{border-color:#b98945;box-shadow:0 0 0 3px #d7ae5b17}
-.hero{background:radial-gradient(circle at 78% 44%,#9d132b1f,transparent 31%),linear-gradient(135deg,#f2ede7,#ded4ca);box-shadow:0 20px 55px #0005}
-.module-cover{background:radial-gradient(circle at 82% 48%,#d7ae5b18,transparent 38%),linear-gradient(135deg,#51101d,#1a1115)}
-.module-cover:after{content:'PLO5';position:absolute;right:14px;bottom:10px;font:800 9px Manrope;letter-spacing:2px;color:#f0cf7a99}
-.topic-number,.lesson-num{background:#2b151c;color:#f0cf7a;border:1px solid #5d303a}
-dialog{background:linear-gradient(180deg,#1c171a,#100f11);border-color:#5a3a42;box-shadow:0 34px 100px #000b}
-
-/* Login premium */
-.login{background:#09090b}
-.login-visual{isolation:isolate;overflow:hidden;background:
- radial-gradient(circle at 46% 44%,#77132638,transparent 25%),
- radial-gradient(circle at 16% 85%,#d7ae5b0c,transparent 22%),
- linear-gradient(145deg,#181114,#0c0b0d 72%);border-right:1px solid #3d292f;color:#f3eee8}
-.login-visual>.brand{position:relative;z-index:30}
-.login-visual:before,.login-visual:after{display:none!important}
-.login-visual h1{color:#f5eee8;text-shadow:0 10px 26px #0008}
-.login-visual p{color:#b9aaad}
-.login-form{background:radial-gradient(circle at 50% 45%,#38111a33,transparent 40%),#09090b}
-.login-form>div{background:linear-gradient(145deg,#181518ee,#111012ee);border:1px solid #473139;border-radius:18px;box-shadow:0 28px 80px #0009,inset 0 1px #ffffff08}
-.login-form .btn[type=submit]{background:linear-gradient(180deg,#f1d17d,#c99d48);color:#21150c;border-color:#f0cf7a;box-shadow:0 9px 26px #0007}
-.role-option{background:#121113;border-color:#3c2c31}.role-option.selected{border-color:#d7ae5b;color:#f0cf7a;box-shadow:0 0 0 1px #d7ae5b33}
-
-/* Cinco cartas PLO5 */
-.hero-art.plo5-art{position:relative;isolation:isolate}.plo5-art .orbit{z-index:0;border-color:#8d102655;opacity:.55}
-.plo5-art .art-star{z-index:8;background:#171114;color:#f0cf7a;border:1px solid #d7ae5b55}
-.plo-hand{position:relative;width:318px;height:190px;z-index:5;filter:drop-shadow(0 17px 15px #0005)}
-.plo-hand .playing{position:absolute;width:86px;height:126px;padding:8px;border:1px solid #bfb5aa;border-radius:8px;background:linear-gradient(145deg,#fffdfa,#f0e9e1 72%,#ded3c8);box-shadow:inset 0 0 0 1px #fff,0 4px 0 #b7ada3,0 14px 20px #0005;font-family:Georgia,serif;font-weight:700;font-size:17px;line-height:1;color:#171315;transform-origin:50% 92%}
-.plo-hand .playing:after{content:'';position:absolute;inset:4px;border:1px solid #291b1e14;border-radius:5px}
-.plo-hand .playing b{position:absolute;inset:31px 0 auto;text-align:center;font-size:42px}.plo-hand .playing small{position:absolute;right:8px;bottom:8px;font-size:16px;transform:rotate(180deg)}
-.plo-hand .c1{left:16px;top:37px;transform:rotate(-19deg)}.plo-hand .c2{left:66px;top:19px;transform:rotate(-10deg);color:#a00e29}.plo-hand .c3{left:116px;top:11px;color:#a00e29}.plo-hand .c4{left:166px;top:19px;transform:rotate(10deg)}.plo-hand .c5{left:216px;top:37px;transform:rotate(19deg)}
-
+/* ===== PLO5 ART ONLY · tema original preservado ===== */
+.hero-art.plo5-art{position:relative;isolation:isolate}
+.plo5-art .orbit{z-index:0;opacity:.52}
+.plo-hand{position:relative;width:326px;height:198px;z-index:5;filter:drop-shadow(0 18px 16px #0005)}
+.plo-hand .playing{
+ position:absolute;width:88px;height:132px;border-radius:8px;
+ background:linear-gradient(145deg,#171719 0%,#080809 70%,#151517 100%);
+ border:1px solid #d7b67e;box-shadow:inset 0 0 0 2px #ffffff0a,inset 0 0 18px #000,0 4px 0 #050506,0 15px 22px #0006;
+ color:#f4ead7;font-family:Georgia,'Times New Roman',serif;font-weight:700;transform-origin:50% 94%;overflow:hidden}
+.plo-hand .playing:after{content:'';position:absolute;inset:5px;border:1px solid #d7b67e38;border-radius:5px;pointer-events:none}
+.plo-hand .playing.red{color:#c52a40}
+.plo-hand .corner{position:absolute;left:9px;top:8px;display:flex;flex-direction:column;align-items:center;font-size:17px;line-height:.9;z-index:2}
+.plo-hand .corner em,.plo-hand .playing small em{font-style:normal;font-size:12px;margin-top:3px}
+.plo-hand .playing>b{position:absolute;inset:37px 0 auto;text-align:center;font-size:43px;line-height:1;font-weight:400;text-shadow:0 2px 10px currentColor}
+.plo-hand .playing small{position:absolute;right:8px;bottom:8px;display:flex;flex-direction:column;align-items:center;font-size:16px;line-height:.9;transform:rotate(180deg);z-index:2}
+.plo-hand .c1{left:13px;top:43px;transform:rotate(-23deg)}
+.plo-hand .c2{left:65px;top:22px;transform:rotate(-12deg)}
+.plo-hand .c3{left:119px;top:12px;transform:rotate(0)}
+.plo-hand .c4{left:173px;top:22px;transform:rotate(12deg)}
+.plo-hand .c5{left:225px;top:43px;transform:rotate(23deg)}
 /* Fichas 3D sobre a mesa: face elíptica + lateral espessa + edge spots */
 .poker-table-chips{position:absolute;right:14px;bottom:-8px;width:155px;height:105px;z-index:10;transform:rotate(-4deg)}
 .chip-pile{position:absolute;width:72px;height:72px}
@@ -201,7 +171,6 @@ dialog{background:linear-gradient(180deg,#1c171a,#100f11);border-color:#5a3a42;b
 .loose-chip{position:absolute;left:0;bottom:0;width:70px;height:35px;border-radius:50%;transform:perspective(120px) rotateX(56deg) rotateZ(-15deg);background:radial-gradient(ellipse,#111 0 27%,#d7ae5b 28% 31%,#19191b 32% 49%,transparent 50%),repeating-conic-gradient(#e9d9b9 0 8deg,#141416 8deg 31deg);border:2px solid #09090a;box-shadow:inset 0 0 0 4px #171719,inset 0 0 0 6px #d7ae5b,0 9px 0 #070708,0 13px 9px #0009}
 .loose-chip span{position:absolute;inset:7px 0;text-align:center;color:#f0cf7a;font-size:14px}
 
-/* sutil superfície de mesa sob a arte */
-.hero-art.plo5-art:after{content:'';position:absolute;left:1%;right:1%;bottom:-9px;height:34px;border-radius:50%;background:radial-gradient(ellipse,#201315aa,transparent 68%);filter:blur(2px);z-index:1}
 
+.hero-art.plo5-art:after{content:'';position:absolute;left:2%;right:2%;bottom:-9px;height:34px;border-radius:50%;background:radial-gradient(ellipse,#20131588,transparent 68%);filter:blur(2px);z-index:1}
 @media(max-width:780px){.plo-hand{transform:scale(.78);transform-origin:center}.poker-table-chips{right:0;transform:scale(.78) rotate(-4deg);transform-origin:right bottom}}
