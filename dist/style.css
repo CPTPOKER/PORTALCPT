@@ -131,3 +131,7 @@ dialog.has-images form,dialog.has-images .fields,dialog.has-images label,dialog.
 @media(max-width:780px){.topic-card .progress{margin-bottom:15px}.topic-card .topic-actions{gap:10px}}
 
 .lock-dialog{display:flex;align-items:center;gap:12px;padding:12px 0 4px}.lock-dialog svg{width:28px;height:28px;color:#d7b67e;flex:none}.lock-dialog p{margin:0;color:var(--muted);line-height:1.5}.check-row{display:flex!important;flex-direction:row!important;align-items:center;gap:9px}.check-row input{width:16px!important;height:16px!important;margin:0}
+
+/* Exibir / ocultar senha */
+.password-wrap{position:relative;display:block;width:100%}.password-wrap>input{width:100%;padding-right:44px!important}.password-toggle{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:36px;height:36px;display:grid;place-items:center;border:0;border-radius:7px;background:transparent;color:var(--muted);cursor:pointer;font-size:18px;line-height:1}.password-toggle:hover,.password-toggle:focus-visible,.password-toggle.showing{color:#e6c183;background:#ffffff0a}.password-toggle.showing span{opacity:.55}
+@media(max-width:780px){.password-toggle{width:40px;height:40px;right:3px}.password-wrap>input{padding-right:48px!important}}
