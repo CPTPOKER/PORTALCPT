@@ -262,3 +262,17 @@ dialog{
 .plo-hand:not(.compact-hand) .corner,.plo-hand:not(.compact-hand) .playing>b,.plo-hand:not(.compact-hand) .playing small{z-index:4;text-shadow:0 2px 4px #0009}
 .plo-hand:not(.compact-hand) .playing>b{color:#fff}
 .plo-hand:not(.compact-hand) .corner em,.plo-hand:not(.compact-hand) .playing small em{color:#fff}
+
+
+/* ===== PLO5 CARD FACE V2 · full color body ===== */
+.plo-hand:not(.compact-hand) .playing{background:#202223!important;border:1px solid #4a4d4e!important;color:#fff!important;overflow:hidden}
+.plo-hand:not(.compact-hand) .playing:before{content:''!important;position:absolute!important;left:0!important;right:0!important;top:29px!important;bottom:0!important;height:auto!important;background:var(--card-accent,#333)!important;clip-path:none!important;opacity:1!important;z-index:0!important}
+.plo-hand:not(.compact-hand) .playing.black{--card-accent:#333637}
+.plo-hand:not(.compact-hand) .playing.red{--card-accent:#b50916}
+.plo-hand:not(.compact-hand) .playing.green{--card-accent:#078b35}
+.plo-hand:not(.compact-hand) .playing.blue{--card-accent:#0766a7}
+.plo-hand:not(.compact-hand) .corner{left:7px!important;top:5px!important;font-family:Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:.8!important;color:#fff!important;z-index:5!important;text-shadow:0 1px 2px #000!important}
+.plo-hand:not(.compact-hand) .corner em{font-size:9px!important;margin-top:4px!important;color:#fff!important}
+.plo-hand:not(.compact-hand) .playing>strong{position:absolute;z-index:4;left:7px;right:3px;bottom:4px;font-family:Arial Black,Arial,sans-serif;font-size:52px;line-height:.82;letter-spacing:-5px;color:#fff;text-align:center;text-shadow:0 2px 3px #0005}
+.plo-hand:not(.compact-hand) .playing>b,.plo-hand:not(.compact-hand) .playing>small{display:none!important}
+.plo-hand:not(.compact-hand) .playing:after{inset:3px!important;border:1px solid #ffffff12!important;border-radius:5px!important;box-shadow:inset 0 1px #ffffff0d!important}
