@@ -355,3 +355,15 @@ dialog{
 
 /* PLO5 · naipes superiores um pouco maiores */
 .plo-hand:not(.compact-hand) .corner em{font-size:14px!important;margin-top:4px!important}
+
+
+/* PLO5 · ranks grandes e cortados como o baralho de referência */
+.plo-hand:not(.compact-hand) .playing>strong{
+ left:-3px!important;right:-7px!important;bottom:-16px!important;
+ font-size:78px!important;line-height:.82!important;letter-spacing:-8px!important;
+ overflow:visible!important
+}
+.plo-hand:not(.compact-hand) .playing.c5>strong{
+ left:-9px!important;right:-10px!important;bottom:-13px!important;
+ font-size:65px!important;letter-spacing:-10px!important
+}
